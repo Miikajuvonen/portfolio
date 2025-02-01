@@ -1,0 +1,208 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,0,0,0.4) 0%, rgba(0,0,0,1) 80%);
+    z-index: -1;
+}
+
+.warning-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.warning-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4444;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(255, 68, 68, 0.8);
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.8; text-shadow: 0 0 5px rgba(255, 68, 68, 0.5); }
+    100% { opacity: 1; text-shadow: 0 0 20px rgba(255, 68, 68, 1); }
+}
+
+.sub-text {
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.continue-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: #ff4444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.8);
+}
+
+.continue-btn:hover {
+    background: #ff2222;
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin: 60px;
+}
+
+.project {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgb(0, 255, 204);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.project a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgba(0, 255, 204, 0.3);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+    margin-top: 10px;
+}
+
+.project a:hover {
+    background-color: rgb(0, 255, 204);
+    transform: scale(1.05);
+}
+
+.business-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e;
+    padding: 60px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.business-card img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 30px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgb(0, 255, 204);
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.text-content h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.text-content p {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.text-content a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.text-content a:hover {
+    color: #ffffff;
+}
